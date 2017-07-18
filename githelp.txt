@@ -28,7 +28,7 @@ ls 查看当前目录下的文件 ls -a查看目录下文件包括隐藏文件
 4	版本回退	git log （查看历史提交记录）
  			git log --pretty=oneline （格式化历史提交记录以1行的方式显示）
 			git reset --hard HEAD^	(HEAD~100)
-			git reset --hard 1232345546ef (此处为你要回退的版本号)
+			git reset --hard 1232345546ef (此处为你要回退的版本号,复制七八位)
 			
 5	撤销修改	git checkout -- filename (工作区修改未添加到缓存区)
 			git reset HEAD filename	(将当前缓存区的文件退回到工作区，然后执行上一步)
