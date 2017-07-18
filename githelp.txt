@@ -1,0 +1,44 @@
+﻿廖雪峰的官方网站：
+git网站：
+https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/
+
+在电脑安装git时，不要放在c盘，安装步骤中 path environment 选择第三个，之后都是下一步；
+
+使用git
+在cmd中输入git，使用参考网站；
+
+ls 查看当前目录下的文件 ls -a查看目录下文件包括隐藏文件
+17号
+
+1	下载git：https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit
+2	配置	git config --global user.name "your name"          
+		git config --global user.email "your email"     
+3	创建版本库	cd D:   进入D盘
+			mkdir learngit  创建文件夹
+			cd learngit  进入文件夹内
+			pwd   显示当前的路径
+			git init    git初始化作用： 在新建的文件夹里创建里隐藏文件
+                           如果想要在learngit下显示  在左侧点击 组织--》文件夹和搜索选项--》勾出隐藏内容；把githelp.txt放在learngit下
+			当前目录下创建文本文件 githelp.txt 里面内容随意
+			git add githelp.txt    把要提交的所有修改放到暂存区（Stage）
+			git commit -m "first commit"    在暂存区的内容提交到版本库
+			git status
+			修改文件githelp.txt(例如在里面新加入一行，git is a good software)
+			git diff githelp.txt (查看当前文件与版本库管理的当前文件的区别)				
+4	版本回退	git log （查看历史提交记录）
+ 			git log --pretty=oneline （格式化历史提交记录以1行的方式显示）
+			git reset --hard HEAD^	(HEAD~100)
+			git reset --hard 1232345546ef (此处为你要回退的版本号)
+			
+5	撤销修改	git checkout -- filename (工作区修改未添加到缓存区)
+			git reset HEAD filename	(将当前缓存区的文件退回到工作区，然后执行上一步)
+6	删除文件	git checkout -- filename (工作区误删除，从当前版本库最新版本检出该文件即可)
+			git add/rm filename
+			git commit -m "delete filename"
+7	远程仓库	github.com
+	创建SSH Key 	cd/cd ~ 
+			ssh-keygen -t rsa -C "youremail@example.com"
+			将当前用户根目录下的.ssh/id_rsa.pub 文件里的内容复制到远程仓库github设置里面的SSH下的添加SSH里面
+8	myeclipse egit插件	help -> about myeclipse...-> intall details -> eclipse platform	(10对应为3.7.0)	
+			egit官网下载插件	
+			myeclipse 根目录下的dropins下新建 egit,将解压后后文件放入此文件夹
